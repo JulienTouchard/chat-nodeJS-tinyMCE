@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client chat ADAI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.min.js"
+        integrity="sha512-mHO4BJ0ELk7Pb1AzhTi3zvUeRgq3RXVOu9tTRfnA6qOxGK4pG2u57DJYolI4KrEnnLTcH9/J5wNOozRTDaybXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.1.0/tinymce.min.js"
+        integrity="sha512-dr3qAVHfaeyZQPiuN6yce1YuH7YGjtUXRFpYK8OfQgky36SUfTfN3+SFGoq5hv4hRXoXxAspdHw4ITsSG+Ud/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h1>CHAT ADAI</h1>
+    <div id="private" class="hide">
+        <div class="privateInner">
+            <div id="closePrivate" class="close">X</div>
+            <textarea id="myprivate"></textarea>
+            <button id="sendPrivate">Envoyer en privé</button>
+        </div>
+    </div>
+    <div id="responsePrivate" class="hide">
+        <div id="responsePrivateInner">
+            <div id="closeResponsePrivate" class="close">X</div>
+        </div>
+    </div>
+    <section>
+        <div id="clients"></div>
+        <div id="messagesFrame"></div>
+        <div id="messages">
+            <textarea id="mytextarea"></textarea>
+            <button id="sendMessage">Envoyer</button>
+        </div>
+       
+    </section>
+</body>
+
+</html>
