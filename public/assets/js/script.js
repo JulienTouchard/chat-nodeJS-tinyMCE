@@ -81,7 +81,7 @@ function displayMessages(mesMessages) {
     mesMessages.forEach(element => {
         messagesTmp += element.pseudo + "<br>" +
             element.message + "<br>" +
-            element.date + "<br><hr>";
+            element.date + "<br><hr>";//alternative utilisation de moment.js pour le formatage de date
     });
     messagesFrame.innerHTML = messagesTmp;
 }
