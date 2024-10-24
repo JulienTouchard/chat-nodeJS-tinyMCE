@@ -21,6 +21,7 @@ function displayClients(monSocketClients) {
     let clientsTmp = "<div>Clients connectés : </div>";
     monSocketClients.forEach(element => {
         if (monId !== element.id) {
+            // Grosse triche avec le onclick. Alternative : creer l'element avec un event lié
             clientsTmp += `<div onclick="privateMessage('${element.id}');" >${element.pseudo}</div>`;
         }
     });

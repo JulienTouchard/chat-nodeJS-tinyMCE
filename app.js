@@ -5,7 +5,10 @@ const server = http.Server(app);
 const io = require('socket.io')(server);
 const hostname = '127.0.0.1';
 const port = 8000;
+// un tableau qui comprendra tous les clients connectés avec leur id
 let socketClients = [];
+// un tableau qui enregistrera Tous les messages du channel
+// alternative utilisation du module fs pour "écrire en dur les message dans un fichier ex:message.json"
 let messages = [];
 
 
@@ -52,6 +55,7 @@ io.on('connection', (socket) => {
             // socket.id = client déconnecté
             for (let i = 0; i < socketClients.length; i++) {
                 if (socketClients[i].id === socket.id) {
+                    // utilisation de splice sur mon tableau pour supprimer l'index correspondant au client deconnecté
                     socketClients.splice(i, 1);
                 }
             }
